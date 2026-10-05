@@ -23,14 +23,21 @@ function listarImpares() {
     }
 }
 function ejecutar(numEjercicio) {
-    if (numEjercicio == 1) {
-        listarNumero();
-    } else if (numEjercicio == 2) {
-        listarNumerosReversa();
-    } else if (numEjercicio == 3) {
-        listarPares();
-    } else if (numEjercicio == 4) {
-        listarImpares();
+   switch (numEjercicio) {
+        case 1:
+            listarNumero();
+            break;
+        case 2:
+            listarNumerosReversa();
+            break;
+        case 3:
+            listarPares();
+            break;
+        case 4:
+            listarImpares();
+            break;
+        default:
+            console.log("Ejercicio no encontrado");
     }
 }
 
