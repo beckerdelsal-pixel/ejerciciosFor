@@ -1,0 +1,145 @@
+/* Configuración general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background: #f2f4f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Contenedor principal */
+.contenedor {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Botón PROBAR */
+.btn-probar {
+    width: 100%;
+    max-width: 220px;
+    padding: 14px 30px;
+    margin-bottom: 25px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #1f4e79;
+    color: white;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-probar:hover {
+    background: #163a5c;
+    transform: translateY(-2px);
+}
+
+/* Tarjeta */
+.tarjeta {
+    width: 100%;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+}
+
+h1 {
+    margin-bottom: 25px;
+    color: #1f4e79;
+    font-size: 30px;
+}
+
+/* Tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+th {
+    background: #1f4e79;
+    color: white;
+    padding: 14px;
+    font-size: 17px;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+    color: #333;
+}
+
+tbody tr:nth-child(even) {
+    background: #f5f8fb;
+}
+
+tbody tr:hover {
+    background: #e8f0f7;
+}
+
+/* Responsive para tablets */
+@media (max-width: 768px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .tarjeta {
+        padding: 25px 20px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    th,
+    td {
+        padding: 11px;
+    }
+}
+
+/* Responsive para celulares */
+@media (max-width: 480px) {
+
+    body {
+        padding: 12px;
+    }
+
+    .btn-probar {
+        max-width: 100%;
+        font-size: 16px;
+        padding: 13px;
+    }
+
+    .tarjeta {
+        padding: 20px 12px;
+        border-radius: 12px;
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    th,
+    td {
+        padding: 10px 6px;
+        font-size: 14px;
+    }
+}
