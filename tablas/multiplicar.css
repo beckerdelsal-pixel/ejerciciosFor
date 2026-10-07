@@ -154,6 +154,129 @@ h1::after {
     background: #2a9d8f;
 }
 
+/* =========================================================
+   CAJA DE TEXTO
+   ========================================================= */
+
+.campo-texto {
+    width: 100%;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+/* Etiqueta */
+
+.campo-texto label {
+    margin-bottom: 8px;
+    color: #344854;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+}
+
+/* Campo de texto */
+
+.campo-texto input {
+    width: 100%;
+    padding: 13px 15px;
+
+    border: 1px solid #d8e2e6;
+    border-radius: 10px;
+
+    background: #f9fbfc;
+    color: #24323d;
+
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+
+    outline: none;
+
+    box-shadow: inset 0 1px 2px rgba(31, 52, 65, 0.03);
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease,
+        background 0.25s ease;
+}
+
+/* Texto de ejemplo */
+
+.campo-texto input::placeholder {
+    color: #8a9aa3;
+    font-weight: 400;
+}
+
+/* Campo seleccionado */
+
+.campo-texto input:focus {
+    border-color: #2a9d8f;
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 3px rgba(42, 157, 143, 0.12),
+        0 3px 8px rgba(31, 52, 65, 0.05);
+}
+
+/* =========================================================
+   RESPONSIVE - TABLET
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .campo-texto {
+        margin-bottom: 22px;
+    }
+
+    .campo-texto label {
+        font-size: 14px;
+    }
+
+    .campo-texto input {
+        padding: 12px 14px;
+        font-size: 14px;
+    }
+}
+
+/* =========================================================
+   RESPONSIVE - CELULAR
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .campo-texto {
+        margin-bottom: 20px;
+    }
+
+    .campo-texto label {
+        font-size: 13px;
+    }
+
+    .campo-texto input {
+        padding: 12px 13px;
+        font-size: 14px;
+        border-radius: 9px;
+    }
+}
+
+/* =========================================================
+   CELULARES MUY PEQUEÑOS
+   ========================================================= */
+
+@media (max-width: 350px) {
+
+    .campo-texto {
+        margin-bottom: 18px;
+    }
+
+    .campo-texto input {
+        padding: 11px 12px;
+        font-size: 13px;
+    }
+}
 
 /* =========================================================
    TABLA
