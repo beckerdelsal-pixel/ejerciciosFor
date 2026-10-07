@@ -4,97 +4,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabla del 3</title>
+    <title>Generador de Tablas de Multiplicar</title>
     <link rel="stylesheet" href="multiplicar.css">
-    <script src="multiplicar.js"></script>
+    <script src="multiplicar.js" defer></script>
 </head>
 
 <body>
 
     <main class="contenedor">
 
-        <button class="btn-probar" onclick="generarTablas();">PROBAR</button>
-
         <section class="tarjeta">
-            <h1>Tabla de Multiplicar</h1>
+            <header class="encabezado-tarjeta">
+                <h1>Tabla de Multiplicar</h1>
+                <p class="subtitulo">Ingresa cualquier número para aprender y consultar su tabla al instante.</p>
+            </header>
 
-            <div class="campo-texto">
+            <form class="formulario-multiplicar" onsubmit="event.preventDefault(); generarTablas();">
+                <div class="campo-texto">
+                    <label for="txtNumero">¿Qué tabla deseas ver?</label>
+                    <div class="grupo-input">
+                        <input 
+                            type="number" 
+                            id="txtNumero" 
+                            name="txtNumero" 
+                            placeholder="Ej. 5" 
+                            min="1" 
+                            max="999" 
+                            inputmode="numeric" 
+                            required 
+                            autocomplete="off"
+                        >
+                        <button type="submit" class="btn-generar" id="btnGenerar">
+                            Mostrar Tabla
+                        </button>
+                    </div>
+                    <span class="mensaje-ayuda" id="mensajeAyuda">Escribe un número del 1 al 999.</span>
+                </div>
+            </form>
 
-                <label for="txtNumero">Número a multiplicar</label>
-
-                <input type="text" id="txtNumero" name="txtNumero" placeholder="Ingrese un número..."
-                    autocomplete="off">
-
+            <div class="contenedor-tabla" aria-live="polite">
+                <table id="tablaResultados">
+                    <thead>
+                        <tr>
+                            <th>Multiplicación</th>
+                            <th>Resultado</th>
+                        </tr>
+                    </thead>
+                    <tbody id="contenedorTabla">
+                        <tr>
+                            <td colspan="2" class="estado-vacio">
+                                💡 Ingresa un número arriba y presiona <strong>"Mostrar Tabla"</strong>.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-
-            <table>
-                <thead>
-                    <tr>
-                        <th>Operación</th>
-                        <th>Resultado</th>
-                    </tr>
-                </thead>
-
-                <tbody id="contenedorTabla">//contenedor
-                    <tr>//item
-                        <td>1 × 1</td>
-                        <td>1</td>
-                    </tr>
-                    <tr>//item
-                        <td>1 × 2</td>
-                        <td>2</td>
-                    </tr>
-                    <tr>//item
-                        <td>1 × 3</td>
-                        <td>3</td>
-                    </tr>
-                    <tr>//item
-                        <td>1 × 4</td>
-                        <td>4</td>
-                    </tr>
-                    <tr>//item
-                        <td>1 × 5</td>
-                        <td>25</td>
-                    </tr>
-                    <tr>//item
-                        <td>1 × 6</td>
-                        <td>6</td>
-                    </tr>
-                    <tr>//item
-                        <td>1 × 7</td>
-                        <td>7</td>
-                    </tr>
-                    <tr>//item
-                        <td>1 × 8</td>
-                        <td>8</td>
-                    </tr>
-                    <tr>//item
-                        <td>1 × 9</td>
-                        <td>9</td>
-                    </tr>
-                    <tr>//item
-                        <td>1 × 10</td>
-                        <td>10</td>
-                    </tr>
-                </tbody>
-            </table>
         </section>
 
     </main>
+
     <footer class="pie-pagina">
-
         <div class="perfil-autor">
-
-            <img src="avatar.png" alt="Avatar de Becktorke" class="avatar">
-
+            <img src="avatar.png" alt="Foto de perfil del desarrollador" class="avatar">
             <div class="informacion-autor">
                 <span class="etiqueta-autor">DESARROLLADOR</span>
                 <span class="nickname">Becktorke</span>
             </div>
-
         </div>
-
     </footer>
+
 </body>
 
 </html>
